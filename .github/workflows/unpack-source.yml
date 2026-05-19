@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - repo-source.tar.gz.b64
+      - repo-source.tar.gz.b64.part-*
       - .github/workflows/unpack-source.yml
 
 permissions:
@@ -20,8 +20,9 @@ jobs:
 
       - name: Unpack source files
         run: |
+          cat repo-source.tar.gz.b64.part-* > repo-source.tar.gz.b64
           base64 -d repo-source.tar.gz.b64 | tar -xz
-          rm -f repo-source.tar.gz.b64
+          rm -f repo-source.tar.gz.b64 repo-source.tar.gz.b64.part-*
           rm -f .github/workflows/unpack-source.yml
 
       - name: Commit source files
