@@ -277,7 +277,7 @@ export default function App() {
               <p className="button-text whitespace-nowrap text-[12px] leading-[1.7] text-[#B8A15A] sm:text-[16px] md:text-[20px]">多くの店舗・事業者様にご利用いただいています</p>
               <span className="hidden h-px w-12 bg-[#B8A15A] sm:block" />
             </div>
-            <div className="mb-1 flex items-center justify-center gap-3"><span className="h-1.5 w-1.5 rotate-45 bg-[#B8A15A] /><span className="h-1.5 w-1.5 rotate-45 bg-[#B8A15A]" /><span className="h-1.5 w-1.5 rotate-45 bg-[#B8A15A]" /></div>
+            <div className="mb-1 flex items-center justify-center gap-3"><span className="h-1.5 w-1.5 rotate-45 bg-[#B8A15A]" /><span className="h-1.5 w-1.5 rotate-45 bg-[#B8A15A]" /><span className="h-1.5 w-1.5 rotate-45 bg-[#B8A15A]" /></div>
             <h2 className="hero-title whitespace-nowrap text-[23px] leading-[1.16] text-[#1F5D34] sm:text-[38px] md:text-[56px]">こんな方に選ばれています</h2>
             <span className="mx-auto mt-2 block h-2 w-24 rounded-[50%] border-t-[3px] border-[#B8A15A]" />
           </div>
