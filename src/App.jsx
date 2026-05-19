@@ -65,10 +65,10 @@ const steps = [
 ];
 
 const audiences = [
-  { number: '01', title: ['飲食店・バーの', '新規展開に'], description: 'オリジナルシャンパンでお店の価値を高める', image: assets.audienceC01, Icon: Martini },
-  { number: '02', title: ['ナイト事業の', 'イベントに'], description: 'バースデーや周年イベントを華やかに演出', image: assets.audienceC02, Icon: Crown },
-  { number: '03', title: ['ブランド・企業の', 'ノベルティに'], description: 'オリジナルデザインでブランド価値を向上', image: assets.audienceC03, Icon: Gift },
-  { number: '04', title: ['サイドビジネス・', '副業に'], description: '設備ゼロ・在庫ゼロで手軽に始められる', image: assets.audienceC04, Icon: ChartNoAxesCombined },
+  { number: '01', title: ['飲食店・バーの', '新規展開に'], description: ['オリジナルシャンパンで', 'お店の価値を高める'], image: assets.audienceC01, Icon: Martini },
+  { number: '02', title: ['ナイト事業の', 'イベントに'], description: ['バースデー・周年イベントを', '華やかに演出'], image: assets.audienceC02, Icon: Crown },
+  { number: '03', title: ['ブランド・企業の', 'ノベルティに'], description: ['オリジナルデザインで', 'ブランド価値を向上'], image: assets.audienceC03, Icon: Gift },
+  { number: '04', title: ['サイドビジネス・', '副業に'], description: ['設備ゼロ・在庫ゼロで', '手軽に始められる'], image: assets.audienceC04, Icon: ChartNoAxesCombined },
 ];
 
 const ctaButtons = [
@@ -160,13 +160,15 @@ function AudienceCard({ number, title, description, image, Icon }) {
         <div className="audience-card-icon relative z-20 mx-auto flex items-center justify-center rounded-full bg-[#0E6039] ring-2 ring-white sm:ring-4">
           <Icon className="text-[#D2B75C]" strokeWidth={1.7} />
         </div>
-        <h3 className="audience-card-title mx-auto max-w-[270px] text-[#1F5D34]">
+        <h3 className="audience-card-title mx-auto w-full text-[#1F5D34]">
           {title.map((line) => <span key={line} className="block whitespace-nowrap">{line}</span>)}
         </h3>
         <div className="audience-divider relative mx-auto h-px w-[86%] bg-[#D2B75C]/70">
           <span className="audience-divider-dot absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-[#B8A15A]" />
         </div>
-        <p className="audience-card-description body-text mx-auto max-w-[260px] text-[#183826]">{description}</p>
+        <p className="audience-card-description body-text mx-auto w-full text-[#183826]">
+          {description.map((line) => <span key={line} className="block whitespace-nowrap">{line}</span>)}
+        </p>
       </div>
     </article>
   );
@@ -193,7 +195,7 @@ function FloatingCta() {
           <p className="body-text text-[11px] leading-[1.5] text-[#183826]/62">在庫・酒販・制作体制を使った始め方をご案内します。</p>
         </div>
         <div className="grid min-w-0 flex-1 grid-cols-2 gap-2 sm:flex sm:flex-none">
-          {ctaButtons.map((button) => <CtaAnchor key={button.label} {...button} className="sm:min-w-[176px]" />)}
+          {ctaButtons.map((button) => <CtaAnchor key={button.label} {...button} className="whitespace-nowrap sm:min-w-[176px]" />)}
         </div>
       </div>
     </div>
@@ -226,7 +228,7 @@ export default function App() {
             <div className="mt-3 flex flex-wrap gap-1.5 md:mt-4 md:gap-2">
               {heroBadges.map((badge) => <span key={badge} className="button-text rounded-full border border-[#C9DCC5] bg-white/76 px-2.5 py-1 text-[9px] leading-none text-[#1F5D34] shadow-[0_8px_18px_rgba(24,56,38,0.05)] md:px-4 md:py-1.5 md:text-[13px]">{badge}</span>)}
             </div>
-            <h1 className="hero-title mt-5 text-[24px] leading-[1.16] text-[#1F5D34] [letter-spacing:0.01em] sm:text-[42px] md:mt-8 md:text-[52px] md:[letter-spacing:0.035em]">
+            <h1 className="hero-title mt-5 text-[24px] leading-[1.16] text-[#1F5D34] [letter-spacing:0.01em] sm:text-[40px] md:mt-8 md:text-[50px] md:[letter-spacing:0.03em]">
               <span className="whitespace-nowrap">在庫を抱えずに、</span><br />
               <span className="whitespace-nowrap">オリシャン事業を</span><br />
               <span className="whitespace-nowrap">かんたんスタート。</span>
@@ -234,9 +236,9 @@ export default function App() {
             <p className="body-text mt-4 max-w-[410px] text-[12px] leading-[1.85] text-[#183826] md:mt-8 md:text-[17px]">
               制作・印刷・発送はすべて代行。<br />専門知識がなくても、<br />事業立ち上げを進められる仕組みです。
             </p>
-            <div className="mt-7 hidden max-w-[430px] flex-col gap-3 sm:flex sm:flex-row">
-              <CtaAnchor {...ctaButtons[0]} data-track-event="hero_cta_click" />
-              <CtaAnchor {...ctaButtons[1]} data-track-event="hero_cta_click" />
+            <div className="mt-7 hidden max-w-[450px] flex-col gap-3 sm:flex sm:flex-row">
+              <CtaAnchor {...ctaButtons[0]} className="min-w-[190px] whitespace-nowrap" />
+              <CtaAnchor {...ctaButtons[1]} className="min-w-[205px] whitespace-nowrap" />
             </div>
             <p className="body-text mt-3 hidden text-[11px] leading-[1.7] text-[#183826]/58 sm:block">洋サポの体制を使う前提で、導入目的に合わせた進め方をご案内します。</p>
           </div>
