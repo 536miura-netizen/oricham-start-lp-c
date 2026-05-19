@@ -17,14 +17,14 @@ import {
 import { contactLinks } from './lib/tracking.js';
 
 const assets = {
-  hero: '/assets/hero-background-soft-green.jpg',
-  heroBottles: '/assets/hero-bottles-background.jpg',
-  glow: '/assets/transparent-green-glow-overlay.jpg',
-  section: '/assets/section-card-background-pale-green.jpg',
-  audienceC01: '/assets/audience-c-01.jpg',
-  audienceC02: '/assets/audience-c-02.jpg',
-  audienceC03: '/assets/audience-c-03.jpg',
-  audienceC04: '/assets/audience-c-04.jpg',
+  hero: '/assets/hero-background-soft-green.png',
+  heroBottles: '/assets/hero-bottles-background.png',
+  glow: '/assets/transparent-green-glow-overlay.png',
+  section: '/assets/section-card-background-pale-green.png',
+  audienceC01: '/assets/audience-c-01.png',
+  audienceC02: '/assets/audience-c-02.png',
+  audienceC03: '/assets/audience-c-03.png',
+  audienceC04: '/assets/audience-c-04.png',
 };
 
 const categories = ['オリシャン', 'OEM', '副業', 'サイドビジネス', 'フリーランス', '新規事業'];
@@ -226,8 +226,10 @@ export default function App() {
             <div className="mt-3 flex flex-wrap gap-1.5 md:mt-4 md:gap-2">
               {heroBadges.map((badge) => <span key={badge} className="button-text rounded-full border border-[#C9DCC5] bg-white/76 px-2.5 py-1 text-[9px] leading-none text-[#1F5D34] shadow-[0_8px_18px_rgba(24,56,38,0.05)] md:px-4 md:py-1.5 md:text-[13px]">{badge}</span>)}
             </div>
-            <h1 className="hero-title mt-5 text-[24px] leading-[1.16] text-[#1F5D34] [letter-spacing:0.01em] sm:text-[44px] md:mt-8 md:text-[60px] md:[letter-spacing:0.04em]">
-              在庫を抱えずに、<br /><span className="whitespace-nowrap">オリシャン事業を</span><br />かんたんスタート。
+            <h1 className="hero-title mt-5 text-[24px] leading-[1.16] text-[#1F5D34] [letter-spacing:0.01em] sm:text-[42px] md:mt-8 md:text-[52px] md:[letter-spacing:0.035em]">
+              <span className="whitespace-nowrap">在庫を抱えずに、</span><br />
+              <span className="whitespace-nowrap">オリシャン事業を</span><br />
+              <span className="whitespace-nowrap">かんたんスタート。</span>
             </h1>
             <p className="body-text mt-4 max-w-[410px] text-[12px] leading-[1.85] text-[#183826] md:mt-8 md:text-[17px]">
               制作・印刷・発送はすべて代行。<br />専門知識がなくても、<br />事業立ち上げを進められる仕組みです。
@@ -275,7 +277,7 @@ export default function App() {
               <p className="button-text whitespace-nowrap text-[12px] leading-[1.7] text-[#B8A15A] sm:text-[16px] md:text-[20px]">多くの店舗・事業者様にご利用いただいています</p>
               <span className="hidden h-px w-12 bg-[#B8A15A] sm:block" />
             </div>
-            <div className="mb-1 flex items-center justify-center gap-3"><span className="h-1.5 w-1.5 rotate-45 bg-[#B8A15A]" /><span className="h-1.5 w-1.5 rotate-45 bg-[#B8A15A]" /><span className="h-1.5 w-1.5 rotate-45 bg-[#B8A15A]" /></div>
+            <div className="mb-1 flex items-center justify-center gap-3"><span className="h-1.5 w-1.5 rotate-45 bg-[#B8A15A] /><span className="h-1.5 w-1.5 rotate-45 bg-[#B8A15A]" /><span className="h-1.5 w-1.5 rotate-45 bg-[#B8A15A]" /></div>
             <h2 className="hero-title whitespace-nowrap text-[23px] leading-[1.16] text-[#1F5D34] sm:text-[38px] md:text-[56px]">こんな方に選ばれています</h2>
             <span className="mx-auto mt-2 block h-2 w-24 rounded-[50%] border-t-[3px] border-[#B8A15A]" />
           </div>
